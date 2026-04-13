@@ -4,7 +4,7 @@ import logo from "../logo.svg";
 function Header() {
   return (
     <div>
-      <Navbar bg="">
+      <Navbar bg="light">
         <Navbar.Brand href="Home">
           <img src={logo} height={50} width={50}></img>
         </Navbar.Brand>
