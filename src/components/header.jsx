@@ -1,5 +1,6 @@
-import { Navbar, Nav, NavLink, Form, Button, Row, Col } from "react-bootstrap";
+import { Navbar, Nav,Form, Button, Row, Col } from "react-bootstrap";
 import logo from "../logo.svg";
+import {Link} from 'react-router-dom'
 
 function Header() {
   return (
@@ -9,9 +10,9 @@ function Header() {
           <img src={logo} height={50} width={50}></img>
         </Navbar.Brand>
         <Nav className="flex-row">
-          <NavLink href="#home">Home</NavLink>
-          <NavLink href="#product">Product</NavLink>
-          <NavLink href="#about-us">About us</NavLink>
+          <Link to="/vd1">vi du 1</Link>
+          <Link to="/vidu2">vi du 2</Link>
+          <Link to="/vidu3">vi du 3</Link>
         </Nav>
         <Form className="inline">
           <Row>

@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { BrowserRouter, Routes,Route } from "react-router-dom";
 import Header from "./components/header";
-import Bai2 from "./components/bai2"
+import Bai2 from "./components/bai2";
 import Movie from "./components/movie";
 import Book from "./components/book";
 import Counter from "./components/conter";
@@ -8,36 +9,26 @@ import Box from "./components/box";
 import Hello from "./components/hello";
 import { items } from "./components/data";
 import Avatar from "./components/avatar";
+import ViDu2 from "./components/vidu2";
+import ViDu3 from "./components/vidu3";
+import ViDu1 from "./components/vd1";
+import Menu from "./components/menu";
+import Footer from "./components/footer";
 
-const App = () =>{
-  return(
+const App = () => {
+  return (
+    <BrowserRouter>
     <Container>
-      <Row>
-        <Col>
-        <Counter />
-        <Box mau='blue' rong='100px' cao='100px'/>
-        <Box mau='red' rong='100px' cao='100px'/>
-        </Col>
-        <Col>
-        <Hello who='AN' age='21' ques='co khoe khong ?'/>
-        <Hello who='Long'/>
-        <Hello ques='ban ten gi?'/>
-        </Col>
-      </Row>
-      <hr/>
-      {
-        items.map((a,key)=>(
-          <Avatar 
-          key={key}
-          name={a.name}
-          gender={a.gender}
-          img={a.image}
-          />
-        ))
-      }
-    <hr/>
-    <Book/>
+      <Menu/>
+      <Routes>
+        <Route path='Vidu2' element={<ViDu2/>}/>
+        <Route path='Vidu3' element={<ViDu3/>}/>
+        <Route path='book' element={<Book/>}/>
+      </Routes>
+      
+    <Footer/>
     </Container>
+    </BrowserRouter>
   );
 }
 
